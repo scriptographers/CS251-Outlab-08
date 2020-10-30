@@ -1,5 +1,8 @@
+// package P1;
+
 import java.io.File;
 import java.util.Scanner;
+import java.util.ArrayList;
 import java.security.*;
 import java.math.BigInteger;
 
@@ -18,21 +21,34 @@ public class MD5 {
     return hash;
   }
 
-  public static void main(String[] args) throws Exception {
-    MD5 obj = new MD5();
-    File file = new File("MD5sums");
+  public String[][] check_hash(String filepath) throws Exception {
+    File file = new File(filepath);
     Scanner sc = new Scanner(file);
+    ArrayList<String[]> res = new ArrayList<String[]>();
 
     while (sc.hasNextLine()) {
       String str = sc.nextLine();
       int i = str.lastIndexOf("-");
       String[] x = { str.substring(0, i), str.substring(i + 1) };
-      String hash = obj.hasher(x[0].trim());
+      String hash = this.hasher(x[0].trim());
       if (hash.equals(x[1].trim())) {
-        System.out.println("verified");
+        x[1] = "verified";
       } else {
-        System.out.println("not verified");
+        x[1] = "not verified";
       }
+      res.add(x);
+    }
+    sc.close();
+
+    return res.toArray(new String[2][0]);
+  }
+
+  public static void main(String[] args) throws Exception {
+    MD5 obj = new MD5();
+
+    String[][] res = obj.check_hash("MD5sums");
+    for (int i = 0; i < res.length; i++) {
+      System.out.println(res[i][1]);
     }
   }
 }
