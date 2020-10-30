@@ -1,5 +1,3 @@
-// package P1;
-
 import java.io.File;
 import java.util.Scanner;
 import java.util.ArrayList;

@@ -1,24 +1,22 @@
-// package P1;
-
-// import P1.MD5;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.filechooser.*;
 
 public class GUI implements ActionListener {
-
   private JFrame frame;
   private JPanel panel;
   private JTable table;
   private JButton button1;
   private JButton button2;
   private String filepath;
+  private MD5 checker;
 
   public GUI() {
+    checker = new MD5();
+
     frame = new JFrame("MD5 Hash");
     frame.setSize(500, 500);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setVisible(true);
 
     panel = new JPanel();
 
@@ -32,6 +30,7 @@ public class GUI implements ActionListener {
     panel.add(button2);
 
     frame.add(panel);
+    frame.setVisible(true);
   }
 
   @Override
@@ -45,10 +44,23 @@ public class GUI implements ActionListener {
 
       if (r == JFileChooser.APPROVE_OPTION) {
         filepath = j.getSelectedFile().getAbsolutePath();
-      } else
-        System.out.println("select");
+      }
+      System.out.println(filepath);
     } else if (com.equals("preview")) {
       System.out.println("preview");
+      String[] columns = { "plaintext", "result" };
+      String[][] data = {};
+      try {
+        String[][] res = checker.check_hash(filepath);
+        data = res;
+      } catch (Exception ex) {
+        System.out.println(ex);
+      }
+      table = new JTable(data, columns);
+
+      JScrollPane scrollPane = new JScrollPane(table);
+      frame.add(scrollPane);
+      frame.setVisible(true);
     }
   }
 
