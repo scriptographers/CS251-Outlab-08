@@ -11,3 +11,5 @@ https://stackoverflow.com/questions/12857242/java-create-string-array-from-text-
 https://www.javatpoint.com/java-vector
 https://stackoverflow.com/questions/541749/how-to-determine-an-objects-class
 https://www.journaldev.com/18392/java-convert-string-to-double
+https://www.geeksforgeeks.org/intstream-range-java/
+https://www.baeldung.com/java-stream-filter-lambda
