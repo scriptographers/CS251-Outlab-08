@@ -12,10 +12,9 @@ public class Sieve{
         List<Integer> nums = IntStream.range(2, n).boxed().collect(Collectors.toList());
         List<Integer> divisors = IntStream.range(2, (int)Math.ceil(Math.sqrt(n))).boxed().collect(Collectors.toList());
 
-        for (int i = 0; i < divisors.size(); i++) {
-            int p = divisors.get(i);
-            nums = nums.stream().filter(x -> (x%p > 0 || x==p)).collect(Collectors.toList());
-        }
+        divisors.stream().forEach(p -> {
+            nums.removeIf(x -> (x%p == 0 && x!=p));
+        });
 
         System.out.println(nums.toString().replaceAll("[,\\[\\]]", ""));
     }
