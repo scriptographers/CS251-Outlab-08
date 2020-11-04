@@ -27,7 +27,7 @@ public class MD5 {
     while (sc.hasNextLine()) {
       String str = sc.nextLine();
       int i = str.lastIndexOf("-");
-      String[] x = { str.substring(0, i - 1), str.substring(i + 2) };
+      String[] x = {str.substring(0, i - 1), str.substring(i + 2)};
       String hash = this.hasher(x[0]);
       if (hash.equals(x[1].trim())) {
         x[1] = "verified";

@@ -48,7 +48,7 @@ public class GUI implements ActionListener {
       System.out.println(filepath);
     } else if (com.equals("preview")) {
       System.out.println("preview");
-      String[] columns = { "plaintext", "result" };
+      String[] columns = {"plaintext", "result"};
       String[][] data = {};
       try {
         String[][] res = checker.check_hash(filepath);
@@ -64,7 +64,5 @@ public class GUI implements ActionListener {
     }
   }
 
-  public static void main(String[] args) {
-    new GUI();
-  }
+  public static void main(String[] args) { new GUI(); }
 }
