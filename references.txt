@@ -13,3 +13,9 @@ https://stackoverflow.com/questions/541749/how-to-determine-an-objects-class
 https://www.journaldev.com/18392/java-convert-string-to-double
 https://www.geeksforgeeks.org/intstream-range-java/
 https://www.baeldung.com/java-stream-filter-lambda
+https://stackoverflow.com/questions/14442162/java-replace-all-square-brackets-in-a-string
+https://stackoverflow.com/questions/81346/most-efficient-way-to-increment-a-map-value-in-java
+https://www.geeksforgeeks.org/foreach-loop-vs-stream-foreach-vs-parallel-stream-foreach/?rf=rp
+https://www.baeldung.com/java-8-collectors
+https://www.java67.com/2015/01/java-8-map-function-examples.html
+https://www.baeldung.com/java-collection-stream-foreach
