@@ -11,10 +11,12 @@ class StreamingApp {
                      Map<String, ArrayList<String>> movieGenres) {
 
     // Renaming ambiguous parameters
-    Map<String, ArrayList<String>> UM =
-        new HashMap<>(userMovies); // user-movies map
-    Map<String, ArrayList<String>> GM =
-        new HashMap<>(movieGenres); // genre-movies map
+    if (userMovies == null || movieGenres == null) {
+      Map<String, ArrayList<String>> UF = new HashMap<>(); // empty map
+      return UF;
+    }
+    Map<String, ArrayList<String>> UM = userMovies;  // user-movies map
+    Map<String, ArrayList<String>> GM = movieGenres; // genre-movies map
 
     // Create movie-genre map, a movie will have a single genre
     Map<String, String> MG = new HashMap<>();

@@ -49,7 +49,6 @@ public class PollutionCheck {
         temp.setPollutants(Double.parseDouble(info[1]),
                            Double.parseDouble(info[2]),
                            Double.parseDouble(info[3]));
-        data.replace(info[0], temp);
       }
     }
     pfr.close();

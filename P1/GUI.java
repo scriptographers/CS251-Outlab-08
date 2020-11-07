@@ -1,5 +1,6 @@
 import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.*;
 
 public class GUI implements ActionListener {
@@ -59,6 +60,7 @@ public class GUI implements ActionListener {
       table = new JTable(data, columns);
 
       JScrollPane scrollPane = new JScrollPane(table);
+      scrollPane.setBorder(new EmptyBorder(50, 0, 0, 0));
       frame.add(scrollPane);
       frame.setVisible(true);
     }
