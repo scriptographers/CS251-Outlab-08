@@ -1,4 +1,4 @@
-8
+9
 https://www.javatpoint.com/command-line-argument
 https://hackmd.io/@amit23358/HJzReBPeU
 https://stackoverflow.com/questions/19788989/error-unreported-exception-filenotfoundexception-must-be-caught-or-declared-to
@@ -32,3 +32,4 @@ https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
 https://stackoverflow.com/questions/890862/text-file-parsing-in-java
 https://stackoverflow.com/questions/415953/how-can-i-generate-an-md5-hash
 https://stackoverflow.com/questions/45826412/how-to-parse-a-simple-text-file-in-java/45826629
+https://www.geeksforgeeks.org/md5-hash-in-java/
