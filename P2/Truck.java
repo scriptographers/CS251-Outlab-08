@@ -1,7 +1,11 @@
 public class Truck extends Vehicle {
-  private static double constants[] = {25, 0.8, 1000};
+  public Truck(String reg, String mfg, String own) { super(reg, mfg, own); }
 
-  public Truck(String reg, String mfg, String own) {
-    super(reg, mfg, own, constants);
+  @Override
+  public void checkPollutionStatus() {
+    if (co2 <= 25 && co <= 0.8 && hc <= 1000)
+      pollutionStatus = "PASS";
+    else
+      pollutionStatus = "FAIL";
   }
 }

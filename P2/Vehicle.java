@@ -1,30 +1,23 @@
 public class Vehicle {
 
   // Attributes
-  private String regNo;           // vehicle registration number
-  private String manufacturer;    // manufacturer name
-  private String owner;           // name of the owner
-  private double co2;             // CO2 emission level
-  private double co;              // CO emission level
-  private double hc;              // HC emission level
-  private String pollutionStatus; // Can be PASS, FAIL, PENDING
-  private double constants[];     // Emission level constants - CO2, CO, HC
+  private String regNo;             // vehicle registration number
+  private String manufacturer;      // manufacturer name
+  private String owner;             // name of the owner
+  protected double co2;             // CO2 emission level
+  protected double co;              // CO emission level
+  protected double hc;              // HC emission level
+  protected String pollutionStatus; // Can be PASS, FAIL, PENDING
 
   // Functions
-  public Vehicle(String reg, String mfg, String own, double con[]) {
+  public Vehicle(String reg, String mfg, String own) {
     regNo = reg;
     manufacturer = mfg;
     owner = own;
-    constants = con;
     pollutionStatus = "PENDING";
   }
 
-  public void checkPollutionStatus() {
-    if (co2 <= constants[0] && co <= constants[1] && hc <= constants[2])
-      pollutionStatus = "PASS";
-    else
-      pollutionStatus = "FAIL";
-  }
+  public void checkPollutionStatus() { return; }
 
   public String toString() {
     return String.format(
