@@ -1,0 +1,13 @@
+https://www.javatpoint.com/command-line-argument
+https://hackmd.io/@amit23358/HJzReBPeU
+https://stackoverflow.com/questions/19788989/error-unreported-exception-filenotfoundexception-must-be-caught-or-declared-to
+https://www.javatpoint.com/how-to-read-file-line-by-line-in-java
+https://stackoverflow.com/questions/41953388/java-split-and-trim-in-one-shot
+https://www.baeldung.com/java-map-key-exists
+https://stackoverflow.com/questions/4157972/how-to-update-a-value-given-a-key-in-a-hashmap
+http://tutorials.jenkov.com/java-collections/map.html
+https://www.geeksforgeeks.org/hashmap-replacekey-value-method-in-java-with-examples/
+https://stackoverflow.com/questions/12857242/java-create-string-array-from-text-file
+https://www.javatpoint.com/java-vector
+https://stackoverflow.com/questions/541749/how-to-determine-an-objects-class
+https://www.journaldev.com/18392/java-convert-string-to-double
